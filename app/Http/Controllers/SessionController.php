@@ -22,7 +22,6 @@ class SessionController extends Controller
         if (! Auth::attempt($attributes)){
             throw ValidationException::withMessages([
                 'email' => 'Sorry, those credentials do not match',
-                'password' => 'Incorrect password'
             ]);
         }
         //regenerate token
